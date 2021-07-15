@@ -70,6 +70,19 @@ In order to determine the vote count per county and which one had the highest vo
             # 4b: Add the existing county to the list of counties.
             county_options.append(county_name)
 
-## Challenge Overview
+And county votes were also calculated in a similar way, with:
 
-## Challenge Summary
+    # 5: Add a vote to that county's vote count.
+            county_votes[county_name] += 1
+
+The winning county was determined by checking which county had the most votes compared to others. And an if statement was used to get the highest vote count among the county options:
+
+    # 6f: Write an if statement to determine the winning county and get its vote count.
+        if (county_votes[county_name] > county_voter_turnout):
+            winning_county_count = county_votes[county_name]
+            winning_county = county_name
+
+
+## Election-Audit Summary
+
+This Python script will be a useful template for the Colorado Board of Elections to have because it can be applied to other kinds of elections besides the state-wide congressional election. For example, this can be used on a federal level by substituting the counties for states. This script can also be used in an internal election within the Colorado Board, for example, instead of tracking counties voter counts, the board can track department voter counts to determine which department is most involved in the board's internal election.
