@@ -20,7 +20,8 @@ In summary, this project uses a Python code to extract a Colorado election's res
 ## Election-Audit Results
 
 ### Summary Printout 
-<img width="296" alt="Screen Shot 2021-07-15 at 1 22 48 AM" src="https://user-images.githubusercontent.com/84816495/125733305-ed59380c-59ca-4420-92da-6cec0634d202.png">
+<img width="298" alt="Screen Shot 2021-11-19 at 10 37 42 PM" src="https://user-images.githubusercontent.com/84816495/142713312-9504a5fe-16f4-4968-89bf-85982b8fc37f.png">
+
 
 ### Results based on Candidates
 
@@ -78,10 +79,10 @@ And county votes were also calculated in a similar way, with:
 The winning county was determined by checking which county had the most votes compared to others. And an if statement was used to get the highest vote count among the county options:
 
     # 6f: Write an if statement to determine the winning county and get its vote count.
-        if (county_votes[county_name] > county_voter_turnout):
-            winning_county_count = county_votes[county_name]
-            winning_county = county_name
-
+        if (county > winning_county) and (county_percentage > winning_county_percentage):
+            winning_county = county
+            winning_county_candidate = county_name
+            winning_county_percentage = county_percentage
 
 ## Election-Audit Summary
 
